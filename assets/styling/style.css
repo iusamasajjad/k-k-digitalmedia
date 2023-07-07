@@ -43,6 +43,9 @@ body {
     background: #241f1b;
     border-radius: 15px 15px;
 }
+.relative{
+    position: relative;
+}
 .border-wrap {
     position: relative;
     background: linear-gradient(97.03deg, #66EBA9 0%, #6381FD 30.73%, #CE4FBA 69.79%, #FA5561 100%);
@@ -268,11 +271,27 @@ footer ul{
     .text-medium{
         font-size: 12px;
     }
+    .relative{
+        bottom: 50px !important;
+    }
+    .carAdvertisement{
+        margin-top: 80px !important;
+    }
 }
 @media (min-width: 481px) and (max-width: 768px) {
     .text-large{
         font-size: 32px;
     }
+    .relative{
+        bottom: 50px !important;
+    }
+    .carAdvertisement{
+        margin-top: 80px !important;
+    }
 }
-@media (min-width: 769px) and (max-width: 1024px) {}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .text-large{
+        font-size: 32px;
+    }
+}
 @media (min-width: 1025px) and (max-width: 1200px) {}
