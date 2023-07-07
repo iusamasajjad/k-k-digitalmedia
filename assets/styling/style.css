@@ -1,0 +1,278 @@
+body {
+    background-color: rgba(0, 0, 0, 1) !important;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============== common-classes =============== */
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.primary-btn {
+    border: 1px solid;
+    color: white;
+    background: #0f1519;
+    width: 100%;
+    border-style: none;
+    border-radius: 45px 45px;
+}
+
+.gradiant-pink {
+    background: -webkit-linear-gradient(104.72deg, #CE4FBA 39.59%, #FA5561 99.35%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradiant-blue {
+    background: -webkit-linear-gradient(96.53deg, #66EBA9 5.12%, #6381FD 43.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text-green{
+    color:#66eba9;
+}
+.text-pink{
+    color: #f95460;
+}
+.white-light{
+    color: rgba(255, 255, 255, 0.6);
+}
+.blur-bg{
+    background: #241f1b;
+    border-radius: 15px 15px;
+}
+.border-wrap {
+    position: relative;
+    background: linear-gradient(97.03deg, #66EBA9 0%, #6381FD 30.73%, #CE4FBA 69.79%, #FA5561 100%);
+    padding: 1px;
+    border-radius: 45px 45px;
+}
+.text-large{
+    font-size: 102px;
+}
+.text-medium{
+    font-size: 1.25rem;
+}
+/* =================== navbar =============== */
+.hero-section {
+    background-image: url(../images/hero-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* ================ make-your-advertisement =========== */
+.carAdvertisement{
+    background-image: url(../images/car-adver.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* ================== logos-carousel =============== */
+.slider-main {
+    overflow: hidden;
+    .slider {
+      animation: slidein 30s linear infinite;
+      white-space: nowrap;
+      .logos {
+        width: 100%;
+        display: inline-block;
+        margin: 0px 0;
+        .fab {
+          width: calc(100% / 5);
+          animation: fade-in 0.5s 
+            cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+        }
+      }
+    }
+  }
+  
+  @keyframes slidein {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+/* ======================== happy-customer ================== */
+.analysis-bg{
+    background: #231324;
+    border-radius: 40px 40px;
+}
+
+/* ============== Estimator-styling =============== */
+
+.map-bg{
+    background-image: url('../images/map.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 400px;
+    width: 100%;
+}
+/* ======================== active-slider =============== */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 56px;
+    height: 28px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider-active {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(72, 72, 72, 1);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider-active:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgba(102, 235, 169, 1);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider-active {
+    background-color: rgba(72, 72, 72, 1);
+  }
+  
+  input:focus + .slider-active {
+    box-shadow: 0 0 1px rgba(72, 72, 72, 1);
+  }
+  
+  input:checked + .slider-active:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider-active.round {
+    border-radius: 34px;
+  }
+  
+  .slider-active.round:before {
+    border-radius: 50%;
+  }
+  /* =================== slider-Range =================  */
+
+  .range-slider{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#range { -webkit-appearance: none; width: 100%;border-radius: 1rem; }
+#range:focus { outline: none; }
+
+#range::before, #range::after {
+    position: absolute;
+    top: 2rem;
+    color: #333;
+    font-size: 14px;
+    line-height: 1;
+    padding: 3px 5px;
+    background-color: rgba(0,0,0,.1);
+    border-radius: 1rem;
+}
+#range::before { left: 0; content: attr(data-min); }
+#range::after { right: 0; content: attr(data-max); }
+
+#range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1rem;
+    cursor: pointer;
+    animate: 0.2s;
+    background: linear-gradient(90deg, #66eba9 var(--range-progress), #333 var(--range-progress));
+    border-radius: 1rem;
+}
+#range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background: url('../images/rectangle.png');
+    cursor: pointer;
+    height: 32px; width: 32px;
+    transform: translateY(calc(-50% + 8px));
+}
+
+#tooltip {
+    position: absolute;
+    top: 30px;
+}
+#tooltip span {
+    position: absolute;
+    text-align: center;
+    display: block;
+    line-height: 1;
+    padding: 0.125rem 0.25rem;
+    color: #fff;
+    border-radius: 0.125rem;
+    background: #281728;
+    font-size: 1.25rem;
+    left: 50%;
+    padding: 10px;
+    font-size: 12px;
+    transform: translate(-50%, 0);
+}
+#tooltip span:before {
+    position: absolute;
+    left: 50%; bottom: -8px;
+    transform: translateX(-50%);
+    width: 0; height: 0;
+    border: 4px solid transparent;
+    border-top-color: #6BA132;
+}
+/* ===========  footer ============ */
+
+footer ul{
+    list-style: none;
+}
+
+/* ================== media-quries =============== */
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .text-large{
+        font-size: 32px;
+    }
+    .text-medium{
+        font-size: 12px;
+    }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .text-large{
+        font-size: 32px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {}
+@media (min-width: 1025px) and (max-width: 1200px) {}
